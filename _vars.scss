@@ -1,0 +1,32 @@
+$colorMainSite: #F16D7F;
+$colorTextWhite: #fff;
+$colorMenuHeading: #000;
+$colorMenuItem: #6F6E6E;
+$bgColorLightPink: #F1E4E6;
+$colorBlack: #222;
+$colorTextLightGrey: #9F9F9F;
+$colorTextProductCard: #5D5D5D;
+$bgColorProductCard: #F8F8F8;
+$colorTextButton: #F26376;
+$colorBorderButton: #FF6A6A;
+$colorFilterOffer: rgba(33, 22, 22, 0.7);
+$colorFilterProductCardHover: rgba(58, 56, 56, 0.86);
+$colorAdvantagesText: #FBFBFB;
+$bgColorFooter: rgba(244, 244, 244, 0.7);
+$bgColorInputText: #E1E1E1;
+$bgColorTopContainer: #F8F3F4;
+$colorItemBreadCrumbs: #636363;
+$bgColorProductSlider: #F7F7F7;
+$bgColorSliderArrow: #2A2A2A26;
+$colorDividerCollection: #EF5B70;
+$colorProductHeading: #4D4D4D;
+$colorProductDesc: #5E5E5E;
+$colorProductDivider: #EAEAEA;
+$siteWidth: 1140px;
+$gap: 30px;
+$siteThirdPart: ($siteWidth - $gap * 2) / 3;
+
+// tablets
+$siteWidthTablet: 736px;
+$gapTablet: 20px;
+$siteThirdPartTablet: ($siteWidthTablet - $gapTablet * 2) / 3;
