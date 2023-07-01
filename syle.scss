@@ -1,7 +1,8 @@
 @import 'vars';
 @import 'product';
+@import 'catalog';
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto&display=swap');
 
 
   @keyframes heartbeat {
@@ -44,6 +45,14 @@ body {
 
 a {
     text-decoration: none;
+}
+
+details > summary {
+    display: block;
+}
+
+details > summary::-webkit-details-marker {
+	display: none;
 }
 
 .center {
