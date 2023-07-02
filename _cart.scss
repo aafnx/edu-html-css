@@ -1,0 +1,223 @@
+.flex-space-between {
+    display: flex;
+    justify-content: space-between;
+    gap: $gap;
+    flex-wrap: wrap;
+}
+
+.cart-content {
+    margin: 96px 0 120px;
+    display: grid;
+    grid-template: auto / minmax(auto, 652px) minmax(auto, $siteThirdPart);
+    gap: $gap;
+    justify-content: space-between;
+}
+
+
+.product-in-cart-grid-box {
+    gap: $gap + 10px;
+    display: grid;
+    grid-template: repeat(auto-fill, minmax(auto, 306px)) / auto;
+}
+
+.product-in-cart {
+    display: flex;
+    box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+    position: relative;
+    box-sizing: border-box;
+
+    &__img {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+
+    &__link-img {
+        max-width: 262px;
+    }
+
+    &__description {
+        margin: 22px 80px 22px 32px;
+    }
+
+    &__btn-close {
+        position: absolute;
+        top: 22px;
+        right: 22px;
+        & svg {
+            transition: transform 0.5s;
+        }
+        &:hover path {
+            fill: $colorMainSite;
+        }
+        &:hover svg {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__heading {
+        color: $colorBlack;
+        font-size: 24px;
+        font-weight: 400;
+        margin-bottom: 42px;
+    }
+
+    &__option {
+        color: $colorTextProductCard;
+        font-size: 22px;
+        font-weight: 400;
+        margin-bottom: 6px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__selected-option {
+        color: $colorMenuItem;
+        padding-left: 6px;
+    }
+
+    &__price {
+        color: $colorDividerCollection;
+    }
+
+    &__quantity {
+        display: block;
+        box-sizing: border-box;
+        padding: 0px 8px;
+        margin-left: 24px;
+        width: 44px;
+        height: 25px;
+        border: 1px solid $bgColorInputText;
+        text-align: center;
+        @extend .hide-input-arrows;
+
+        &:focus {
+            outline: 1px solid $colorMainSite;
+        }
+    }    
+}
+
+.hide-input-arrows {
+     // hide arrows
+     &::-webkit-outer-spin-button,
+     &::-webkit-inner-spin-button {
+         -webkit-appearance: none;
+         margin: 0;
+     }
+
+     // firefox
+     &[type=number] {
+         -moz-appearance: textfield;
+     }
+}
+
+.btn-close {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-product-in-cart {
+    display: flex;
+    align-items: center;
+    color: $colorMenuHeading;
+    font-size: 14px;
+    font-weight: 300;
+    border: 1px solid $colorTextLightGrey;
+    padding: 17px 40px;
+    margin-top: 72px - ($gap + 10px);
+    box-sizing: border-box;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    &:hover {
+        background-color: $colorTextLightGrey;
+        color: $colorTextWhite;
+    }
+}
+
+.order {
+    display: flex;
+    flex-direction: column;
+    gap: $gap - 10px;
+    padding: 22px 0;
+
+    &__heading {
+        color: $colorBlack;
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    &__input {
+        display: block;
+        border: 1px solid $colorTextLightGrey;
+        padding: 13px 17px;
+        color: $colorBlack;
+        font-size: 13px;
+        font-weight: 300;
+        box-sizing: border-box;
+        @extend .hide-input-arrows;
+        &:focus {
+            outline: 1px solid $colorMainSite;
+        }
+    }
+
+    &__btn-get-quote {
+        max-width: 102px;
+        padding: 10px 14px;
+        font-size: 11px;
+        margin: 0;
+    }
+
+    &__total {
+        margin-top: 57px - ($gap - 10px);
+        background: $bgColorOrderTotal;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &__subtotal {
+        color: $colorProductHeading;
+        font-size: 11px;
+        font-weight: 400;
+        text-align: right;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+    }
+
+    &__subtotal-price {
+        padding-left: 10px;
+    }
+
+    &__grandtotal {
+        color: $colorBlack;
+        font-size: 16px;
+        font-weight: 300;
+        text-align: right;
+        text-transform: uppercase;
+    }
+
+    &__grandtotal-price {
+        color: $colorMainSite;
+        font-weight: 700;
+        padding-left: 10px;
+    }
+
+    &__divider {
+        width: 273px;
+        height: 1px;
+        background-color: $bgColorInputText;
+        border: none;
+        box-sizing: border-box;
+        margin: 21px 0 17px;
+    }
+
+    &__btn-submit {
+        width: 273px;
+        padding: 15px 35px;
+        color: $colorTextWhite;
+        font-weight: 300;
+    }
+}
