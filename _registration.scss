@@ -1,0 +1,84 @@
+.registration-content {
+    margin: 64px 0 96px;
+}
+
+.registration-form {
+    max-width: $siteThirdPart;
+    display: flex;
+    flex-direction: column;
+    gap: $gap - 10px;
+    &__caption {
+        color: $colorBlack;
+        font-size: 16px;
+        font-weight: 300;
+    }
+    &__radio-box {
+        display: flex;
+        gap: 20px;
+        margin: 20px 0;
+    }
+    &__label {
+        color: $colorMenuHeading;
+        font-size: 11px;
+        font-weight: 300;
+        line-height: 11px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+    }
+
+    &__password-requirements {
+        color: $bgColorInputText;
+        font-size: 13px;
+        font-weight: 300;
+    }
+
+    &__button {
+        background: $colorMainSite;
+        color: $colorTextWhite;
+        gap: 20px;
+        padding: 16px 20px;
+        width: 167px;
+        &:hover {
+            background: $colorTextWhite;
+            color: $colorMainSite;
+        }
+        &:hover path {
+            fill: $colorMainSite;    
+        }
+    }
+}
+
+
+.registration-info {
+    max-width: 652px;
+    &__heading {
+        color: $colorMenuHeading;
+        font-size: 24px;
+        font-weight: 300;
+    }
+    &__text {
+        color: $colorMenuHeading;
+        font-size: 24px;
+        font-weight: 300;
+        margin: 22px 0;
+    }
+    &__list {
+        list-style-image: url(img/list-style.svg);
+        padding-left: 25px;
+    }
+
+    &__item {
+        color: $colorMenuHeading;
+        font-size: 24px;
+        font-weight: 300;
+        padding-left: 23px;
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+        &::marker {
+            padding: 10px;
+        }
+    }
+}

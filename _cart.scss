@@ -2,7 +2,6 @@
     display: flex;
     justify-content: space-between;
     gap: $gap;
-    flex-wrap: wrap;
 }
 
 .cart-content {
@@ -136,6 +135,26 @@
     }
 }
 
+.input-text {
+    display: block;
+    border: 1px solid $colorTextLightGrey;
+    padding: 13px 17px;
+    color: $colorBlack;
+    font-size: 13px;
+    font-weight: 300;
+    width: 100%;
+    box-sizing: border-box;
+    @extend .hide-input-arrows;
+    &::placeholder {
+        color: $bgColorInputText;
+        font-size: 13px;
+        font-weight: 300;
+    }
+    &:focus {
+        outline: 1px solid $colorMainSite;
+    }
+}
+
 .order {
     display: flex;
     flex-direction: column;
@@ -146,20 +165,6 @@
         color: $colorBlack;
         font-size: 16px;
         font-weight: 300;
-    }
-
-    &__input {
-        display: block;
-        border: 1px solid $colorTextLightGrey;
-        padding: 13px 17px;
-        color: $colorBlack;
-        font-size: 13px;
-        font-weight: 300;
-        box-sizing: border-box;
-        @extend .hide-input-arrows;
-        &:focus {
-            outline: 1px solid $colorMainSite;
-        }
     }
 
     &__btn-get-quote {
@@ -218,6 +223,11 @@
         width: 273px;
         padding: 15px 35px;
         color: $colorTextWhite;
+        background: $colorMainSite;
         font-weight: 300;
+        &:hover {
+            background: $colorTextWhite;
+            color: $colorMainSite;
+        }
     }
 }
