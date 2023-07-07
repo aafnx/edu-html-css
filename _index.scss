@@ -515,7 +515,7 @@
         grid-template: 168px 116px / repeat(auto-fill, minmax(auto, $siteThirdPartTablet));
         gap: $gapTablet;
         margin-top: 65px;
-        margin-bottom: 110px;
+        margin-bottom: 155px;
     }
 
     /* products */
@@ -526,13 +526,21 @@
 
     .products {
         grid-template-columns: repeat(2, minmax(auto, $siteThirdPart));
+        
         gap: 16px;
         margin-top: 73px;
         margin-bottom: 33px;
-    }
-
-    .button {
-        margin: 0 auto 71px;
+        &_catalog-page {
+            grid-template-rows: repeat(4, 1fr);
+            grid-auto-rows: 0;
+            overflow-y: hidden;
+        }
+        &_product-page {
+            grid-template-rows: 1fr;
+            grid-auto-rows: 0;
+            overflow-y: hidden;
+            margin-bottom: 129px;   
+        }
     }
 
     .advantages {
@@ -540,6 +548,7 @@
         gap: 45px;
         justify-content: center;
         padding: 48px 0 64px;
+        margin-top: 65px;
     }
 
     .footer__box {

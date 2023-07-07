@@ -53,6 +53,7 @@
 
 .registration-info {
     max-width: 652px;
+    flex-shrink: 2;
     &__heading {
         color: $colorMenuHeading;
         font-size: 24px;
@@ -66,7 +67,7 @@
     }
     &__list {
         list-style-image: url(img/list-style.svg);
-        padding-left: 25px;
+        padding-left: 28px;
     }
 
     &__item {
@@ -79,6 +80,21 @@
         }
         &::marker {
             padding: 10px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .registration-info {
+        
+        &__heading {
+            font-size: 16px;
+        }
+        &__text {
+            font-size: 16px;
+        }
+        &__item {
+            font-size: 16px;
         }
     }
 }

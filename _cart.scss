@@ -50,7 +50,7 @@
             fill: $colorMainSite;
         }
         &:hover svg {
-            transform: rotate(180deg);
+            transform: rotate(90deg);
         }
     }
 
@@ -158,8 +158,13 @@
 .order {
     display: flex;
     flex-direction: column;
-    gap: $gap - 10px;
     padding: 22px 0;
+
+    &__info {
+        display: flex;
+        gap: $gap - 10px;
+        flex-direction: column;
+    }
 
     &__heading {
         color: $colorBlack;
@@ -175,7 +180,7 @@
     }
 
     &__total {
-        margin-top: 57px - ($gap - 10px);
+        margin-top: 57px;
         background: $bgColorOrderTotal;
         padding: 40px;
         display: flex;
@@ -228,6 +233,36 @@
         &:hover {
             background: $colorTextWhite;
             color: $colorMainSite;
+        }
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .cart-content {
+        display: block;
+    }
+
+    .btn-product-in-cart-box {
+        justify-content: center;
+        gap: 48px;
+    }
+
+    .order {
+        flex-direction: row;
+        gap: 15px;  
+        align-items: center;
+        margin-top: 64px;
+
+        &__info {
+            flex-grow: 1;
+            max-width: $siteThirdPart;
+        }
+        &__total {
+            margin-top: 28px;
+            flex-grow: 1;
+            max-width: $siteThirdPart;
+            box-sizing: border-box;
         }
     }
 }

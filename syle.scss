@@ -62,3 +62,10 @@ details > summary::-webkit-details-marker {
     padding-left: calc(50% - $siteWidth / 2);
     padding-right: calc(50% - $siteWidth / 2);
 }
+
+@media (max-width: 1024px) {
+    .center {
+        padding-left: calc(50% - $siteWidthTablet / 2);
+        padding-right: calc(50% - $siteWidthTablet / 2);
+    }
+}

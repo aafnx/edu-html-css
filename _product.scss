@@ -151,3 +151,10 @@
         fill: $colorTextWhite
     }
 }
+
+@media (max-width: 1024px) {
+    .product-content {
+        position: initial;
+        margin-bottom: 130px;
+    }
+}
