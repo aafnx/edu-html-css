@@ -69,3 +69,10 @@ details > summary::-webkit-details-marker {
         padding-right: calc(50% - $siteWidthTablet / 2);
     }
 }
+
+@media (max-width: 767px) {
+    .center {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
